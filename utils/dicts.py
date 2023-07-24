@@ -1,5 +1,7 @@
 def get_val(collection, key, default='git'):
     if collection == {}:
         return '{}'
+    elif key in collection.keys():
+        return collection[key]
     else:
-        return collection[key] if key else default
+        return default
